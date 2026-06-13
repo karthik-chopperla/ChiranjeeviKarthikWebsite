@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useSpring, useMotionValueEvent } from 'framer-motion';
 
-const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength, containerRef }) => {
+const TagCard = ({ number, title, text, link, className, aosDelay, aosType, pathLength, containerRef }) => {
   const ref = useRef(null);
   const [isActive, setIsActive] = useState(false);
 
@@ -56,6 +56,22 @@ const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength
         }`}>
           {text}
         </p>
+
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`mt-4 inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider transition-colors duration-300 group/link ${
+              isActive ? 'text-white hover:text-red-200' : 'text-gray-900 hover:text-[#ff2a2a]'
+            }`}
+          >
+            View Live
+            <svg className="w-3 h-3 transform group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        )}
       </div>
     </div>
   );
@@ -77,7 +93,7 @@ const Services = () => {
       ref={containerRef}
       className="bg-white pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
-      <div className="max-w-6xl mx-auto relative md:h-[1350px]">
+      <div className="max-w-6xl mx-auto relative md:h-[1050px]">
         
         {/* Header Content */}
         <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[450px] z-20 mb-16 md:mb-0">
@@ -97,13 +113,13 @@ const Services = () => {
 
         {/* Desktop SVG Animated Dashed Line */}
         <svg 
-          className="hidden md:block absolute top-0 left-0 w-full h-[1350px] pointer-events-none z-0" 
-          viewBox="0 0 1000 1350" 
+          className="hidden md:block absolute top-0 left-0 w-full h-[1050px] pointer-events-none z-0"
+          viewBox="0 0 1000 1050"
           preserveAspectRatio="none"
         >
           {/* Faint background path (optional guide) */}
           <path 
-            d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950 C 650,1150 400,1150 300,1200" 
+            d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950" 
             fill="none" 
             stroke="#cbd5e1" 
             strokeWidth="2" 
@@ -113,7 +129,7 @@ const Services = () => {
           {/* Mask to reveal the dashed path based on scroll */}
           <mask id="path-mask">
             <motion.path 
-              d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950 C 650,1150 400,1150 300,1200" 
+              d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950" 
               fill="none" 
               stroke="white" 
               strokeWidth="20" 
@@ -123,7 +139,7 @@ const Services = () => {
 
           {/* The actual dashed line that gets revealed */}
           <path 
-            d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950 C 650,1150 400,1150 300,1200" 
+            d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950" 
             fill="none" 
             stroke="black" 
             strokeWidth="2" 
@@ -175,6 +191,7 @@ const Services = () => {
             number="Apr 2026"
             title="Surya Paints"
             text="PHP · JavaScript · MySQL — E-commerce platform for a paint distributor with product catalog, shade selection, cart, order management, and admin panel."
+            link="https://surya-paints.com/"
             className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
             aosType="fade-left"
             aosDelay="100"
@@ -186,6 +203,7 @@ const Services = () => {
             number="May 2025"
             title="Yoga Pose Generator"
             text="Python · Streamlit · Rule-Based Logic — Wellness platform mapping user pain areas to targeted yoga poses with multilingual support and guided instructions."
+            link="https://yoga-pose-recommender-8yjfhzcefxubwdfqkkgwjc.streamlit.app/"
             className="md:absolute md:top-[450px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-6"
             aosType="fade-right"
             aosDelay="200"
@@ -197,6 +215,7 @@ const Services = () => {
             number="Feb 2025"
             title="Budget Predictor"
             text="Python · Pandas · Matplotlib — AI-powered expense tracker that analyzes spending patterns and forecasts future behavior with actionable visual dashboards."
+            link="https://budget-behavior-predictor-zh2cvkxtwhgs95ayadocm7.streamlit.app/"
             className="md:absolute md:top-[700px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
             aosType="fade-left"
             aosDelay="300"
@@ -204,21 +223,10 @@ const Services = () => {
             containerRef={containerRef}
           />
 
-          <TagCard
-            number="Hackathon"
-            title="Gen AI Advisor"
-            text="LLMs · Python — Financial advisory platform with health scoring, tax optimization, FIRE planning, and portfolio analysis. Built for ET Gen AI Hackathon."
-            className="md:absolute md:top-[1050px] md:left-[15%] lg:left-[25%] -rotate-1 md:-rotate-3"
-            aosType="fade-right"
-            aosDelay="400"
-            pathLength={pathLength}
-            containerRef={containerRef}
-          />
-
           <div
             data-aos="fade-in"
-            data-aos-delay="600"
-            className="hidden md:block absolute top-[1250px] left-[60%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
+            data-aos-delay="500"
+            className="hidden md:block absolute top-[960px] left-[55%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
           >
             Let's build something!
           </div>

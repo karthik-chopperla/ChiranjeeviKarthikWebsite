@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// Adjusted import path for the video
-import heroVideo from '../assets/hero video/webvideo.mp4.mp4';
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -32,16 +30,16 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section className="relative w-full overflow-hidden bg-black" style={{ height: '100dvh', minHeight: '100vh' }}>
       {/* Background Video */}
       <video
         ref={videoRef}
         loop
         muted={isMuted}
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className="absolute top-0 left-0 w-full h-full object-cover object-top z-0"
       >
-        <source src={heroVideo} type="video/mp4" />
+        <source src="/hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

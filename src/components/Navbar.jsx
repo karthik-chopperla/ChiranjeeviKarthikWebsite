@@ -17,15 +17,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['Home', 'About', 'Projects', 'Contact'];
+  const navLinks = ['Home', 'About', 'Experience', 'Projects', 'Contact'];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isOpen 
+        isOpen
           ? 'bg-[#ff2a2a] py-4'
-          : isScrolled 
-            ? 'bg-transparent py-4' 
+          : isScrolled
+            ? 'bg-black/75 backdrop-blur-md py-4'
             : 'bg-transparent py-6'
       }`}
     >

@@ -6,10 +6,13 @@ const Footer = () => {
 
       {/* Top Row */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full font-medium">
-        <div className="flex flex-col gap-1">
-          <p>AI / ML Developer</p>
-          <p>Web Developer &amp; Builder</p>
-          <p>Open Source Contributor</p>
+        <div className="flex flex-col gap-3">
+          {['AI / ML Developer', 'Web Developer & Builder', 'Open Source Contributor'].map((role) => (
+            <div key={role} className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff2a2a] shrink-0"></span>
+              <span className="text-white text-[11px] md:text-sm font-bold tracking-wide">{role}</span>
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-col gap-1 md:items-center">
