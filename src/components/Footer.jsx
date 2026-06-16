@@ -28,8 +28,8 @@ const Footer = () => {
 
       {/* Middle Huge Text */}
       <div className="w-full flex justify-center items-center py-20 md:py-24 overflow-hidden">
-        <h2 className="text-[18vw] md:text-[16vw] leading-none font-sans font-bold tracking-tighter lowercase select-none text-[#f4f4f4] w-full text-center">
-          karthik
+        <h2 className="text-[9vw] md:text-[8vw] leading-none font-sans font-bold tracking-tighter lowercase select-none text-[#f4f4f4] w-full text-center">
+          chiranjeevi karthik
         </h2>
       </div>
 
