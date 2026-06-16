@@ -52,19 +52,21 @@ const About = () => {
               <div className="absolute -top-3 left-1/2 w-16 h-6 bg-gray-900 rounded-t-xl transform -translate-x-1/2 flex justify-center items-center">
                 <div className="w-8 h-2 bg-black/30 rounded-full shadow-inner"></div>
               </div>
-              <div className="w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-800 flex flex-col items-center justify-center gap-2 px-4">
-                <div className="w-20 h-20 rounded-full bg-[#ff2a2a] flex items-center justify-center shadow-lg">
-                  <span className="text-xl font-black text-white tracking-tight">CK</span>
+              <div className="w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-800 flex flex-col items-center justify-center gap-1.5 px-3">
+                <div className="w-16 h-16 rounded-full bg-[#ff2a2a] flex items-center justify-center shadow-lg shrink-0">
+                  <span className="text-base font-black text-white tracking-tight">CK</span>
                 </div>
-                <span className="text-white font-black text-sm mt-2 text-center leading-tight">Chiranjeevi Karthik</span>
-                <span className="text-gray-300 font-semibold text-xs text-center">Chopperla</span>
-                <span className="text-[#ff2a2a] text-[10px] font-bold uppercase tracking-wider mt-0.5">AI / ML Developer</span>
-                <div className="w-full h-px bg-white/10 my-1"></div>
-                <span className="text-gray-400 text-xs text-center">B.Tech — AIML</span>
-                <span className="text-gray-400 text-xs text-center">Ramachandra College</span>
-                <span className="text-gray-500 text-xs mt-1">CGPA: 7.70 / 10</span>
-                <div className="mt-2 px-3 py-1 bg-[#ff2a2a]/20 border border-[#ff2a2a]/40 rounded-full">
-                  <span className="text-[#ff6060] text-[10px] font-bold">2023 – 2027</span>
+                <div className="text-center mt-1">
+                  <p className="text-white font-black text-xs leading-tight">Chiranjeevi</p>
+                  <p className="text-white font-black text-xs leading-tight">Karthik Chopperla</p>
+                </div>
+                <span className="text-[#ff2a2a] text-[9px] font-bold uppercase tracking-wider">AI / ML Developer</span>
+                <div className="w-full h-px bg-white/10 my-0.5"></div>
+                <span className="text-gray-400 text-[10px] text-center">B.Tech — AIML</span>
+                <span className="text-gray-400 text-[10px] text-center">Ramachandra College</span>
+                <span className="text-gray-500 text-[10px]">CGPA: 7.70 / 10</span>
+                <div className="mt-1 px-3 py-1 bg-[#ff2a2a]/20 border border-[#ff2a2a]/40 rounded-full">
+                  <span className="text-[#ff6060] text-[9px] font-bold">2023 – 2027</span>
                 </div>
               </div>
             </div>
@@ -78,7 +80,7 @@ const About = () => {
           <p className="text-lg font-bold mb-8 leading-relaxed max-w-3xl text-red-50">
             I'm{' '}
             <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">
-              Karthik Chopperla
+              Chiranjeevi Karthik Chopperla
             </span>
             , an AI/ML developer passionate about building intelligent systems, automating workflows, and deploying real-world machine learning solutions.
           </p>
