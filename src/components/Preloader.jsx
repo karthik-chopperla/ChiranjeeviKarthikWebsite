@@ -28,21 +28,21 @@ const Preloader = () => {
           <motion.div 
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative text-5xl md:text-7xl font-black tracking-tighter"
+            className="relative text-3xl md:text-5xl font-black tracking-tighter text-center"
           >
             {/* Background text (empty state) */}
             <div className="text-red-900/30">
-              Karthik<span className="text-red-900/30">.</span>
+              Chiranjeevi Karthik<span className="text-red-900/30">.</span>
             </div>
 
             {/* Foreground text (water fill state) */}
-            <motion.div 
+            <motion.div
               className="absolute top-0 left-0 text-white overflow-hidden whitespace-nowrap"
               initial={{ clipPath: 'inset(100% 0 0 0)' }}
               animate={{ clipPath: 'inset(0% 0 0 0)' }}
               transition={{ duration: 1.6, ease: "easeInOut", delay: 0.2 }}
             >
-              Karthik<span className="text-black">.</span>
+              Chiranjeevi Karthik<span className="text-black">.</span>
             </motion.div>
           </motion.div>
 
