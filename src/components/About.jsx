@@ -54,10 +54,11 @@ const About = () => {
               </div>
               <div className="w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-800 flex flex-col items-center justify-center gap-2 px-4">
                 <div className="w-20 h-20 rounded-full bg-[#ff2a2a] flex items-center justify-center shadow-lg">
-                  <span className="text-2xl font-black text-white">CK</span>
+                  <span className="text-xl font-black text-white tracking-tight">CK</span>
                 </div>
-                <span className="text-white font-black text-base mt-2 text-center leading-tight">Karthik Chopperla</span>
-                <span className="text-[#ff2a2a] text-[10px] font-bold uppercase tracking-wider">AI / ML Developer</span>
+                <span className="text-white font-black text-sm mt-2 text-center leading-tight">Chiranjeevi Karthik</span>
+                <span className="text-gray-300 font-semibold text-xs text-center">Chopperla</span>
+                <span className="text-[#ff2a2a] text-[10px] font-bold uppercase tracking-wider mt-0.5">AI / ML Developer</span>
                 <div className="w-full h-px bg-white/10 my-1"></div>
                 <span className="text-gray-400 text-xs text-center">B.Tech — AIML</span>
                 <span className="text-gray-400 text-xs text-center">Ramachandra College</span>
