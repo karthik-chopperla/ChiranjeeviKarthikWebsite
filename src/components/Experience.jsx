@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useSpring, useMotionValueEvent } from 'framer-motion';
 
-const PATH = "M 700,100 C 400,200 200,380 250,480 C 300,580 750,680 700,780 C 650,880 200,1030 250,1130 C 300,1230 750,1330 700,1430";
+const PATH = "M 700,100 C 400,200 200,330 250,430 C 300,530 750,650 700,750 C 650,850 200,1000 250,1100 C 300,1200 750,1300 700,1400 C 650,1500 200,1600 250,1700";
 
 const ExpCard = ({ period, role, org, text, className, aosDelay, aosType, pathLength, containerRef }) => {
   const ref = useRef(null);
@@ -73,7 +73,7 @@ const Experience = () => {
       ref={containerRef}
       className="bg-white pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
-      <div className="max-w-6xl mx-auto relative md:h-[1750px]">
+      <div className="max-w-6xl mx-auto relative md:h-[2100px]">
 
         {/* Header */}
         <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[450px] z-20 mb-16 md:mb-0">
@@ -90,8 +90,8 @@ const Experience = () => {
 
         {/* Desktop animated dashed line */}
         <svg
-          className="hidden md:block absolute top-0 left-0 w-full h-[1750px] pointer-events-none z-0"
-          viewBox="0 0 1000 1750"
+          className="hidden md:block absolute top-0 left-0 w-full h-[2100px] pointer-events-none z-0"
+          viewBox="0 0 1000 2100"
           preserveAspectRatio="none"
         >
           <path d={PATH} fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="8 10" />
@@ -118,13 +118,25 @@ const Experience = () => {
         <div className="flex flex-col gap-8 md:gap-12 items-center md:block relative z-10 w-full pt-4 md:pt-0 pb-12 md:pb-0">
 
           <ExpCard
+            period="Jul 2026 – Present"
+            role="Campus Ambassador"
+            org="E-Cell, IIT Bombay"
+            text="Selected as Campus Ambassador for E-Cell IIT Bombay — promoting entrepreneurship, representing one of India's premier innovation ecosystems on campus."
+            className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
+            aosType="fade-left"
+            aosDelay="100"
+            pathLength={pathLength}
+            containerRef={containerRef}
+          />
+
+          <ExpCard
             period="Apr 2026 – Present"
             role="Campus Leader"
             org="Internshala"
             text="Selected as Campus Leader to represent Internshala on campus — driving internship awareness, leading outreach campaigns, and building stronger student engagement."
-            className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
-            aosType="fade-left"
-            aosDelay="100"
+            className="md:absolute md:top-[380px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-6"
+            aosType="fade-right"
+            aosDelay="200"
             pathLength={pathLength}
             containerRef={containerRef}
           />
@@ -134,9 +146,9 @@ const Experience = () => {
             role="Machine Learning Intern"
             org="Suvidha Foundation"
             text="Contributed to NLP/NLG research; built and analyzed ML models on real-world language data under strict research and no-plagiarism standards."
-            className="md:absolute md:top-[430px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-6"
-            aosType="fade-right"
-            aosDelay="200"
+            className="md:absolute md:top-[700px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
+            aosType="fade-left"
+            aosDelay="300"
             pathLength={pathLength}
             containerRef={containerRef}
           />
@@ -146,9 +158,9 @@ const Experience = () => {
             role="LLM Post-Training Intern"
             org="Ethara AI · Selected Candidate"
             text="Selected through competitive technical screening to work on LLM post-training workflows — AI evaluation, response analysis, and output quality improvement."
-            className="md:absolute md:top-[730px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
-            aosType="fade-left"
-            aosDelay="300"
+            className="md:absolute md:top-[1050px] md:left-[15%] lg:left-[25%] -rotate-1 md:-rotate-3"
+            aosType="fade-right"
+            aosDelay="400"
             pathLength={pathLength}
             containerRef={containerRef}
           />
@@ -158,9 +170,9 @@ const Experience = () => {
             role="AI Intern"
             org="Mirai School of Technology"
             text="Reduced manual effort by 30% designing scalable n8n automation workflows. Built API-integrated pipelines and deployed reliable AI agents in production."
-            className="md:absolute md:top-[1080px] md:left-[15%] lg:left-[25%] -rotate-1 md:-rotate-3"
-            aosType="fade-right"
-            aosDelay="400"
+            className="md:absolute md:top-[1350px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-5"
+            aosType="fade-left"
+            aosDelay="500"
             pathLength={pathLength}
             containerRef={containerRef}
           />
@@ -170,17 +182,17 @@ const Experience = () => {
             role="Content Creator"
             org="Growwise"
             text="Built a YouTube channel reaching 113,700+ views — creating educational content on AI tools, geopolitics, and technology with consistent audience growth."
-            className="md:absolute md:top-[1380px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-5"
-            aosType="fade-left"
-            aosDelay="500"
+            className="md:absolute md:top-[1650px] md:left-[5%] lg:left-[10%] -rotate-1 md:-rotate-3"
+            aosType="fade-right"
+            aosDelay="600"
             pathLength={pathLength}
             containerRef={containerRef}
           />
 
           <div
             data-aos="fade-in"
-            data-aos-delay="600"
-            className="hidden md:block absolute top-[1610px] left-[28%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
+            data-aos-delay="700"
+            className="hidden md:block absolute top-[1920px] left-[45%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
           >
             ...and still growing!
           </div>
